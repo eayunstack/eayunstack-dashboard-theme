@@ -25,21 +25,18 @@ mkdir -p %{buildroot}/usr/share/openstack-dashboard/static/dashboard/img/eayun/
 tar -xzf img-replace.tgz -C %{buildroot}/usr/share/openstack-dashboard/static/dashboard/img/eayun/
 
 %post
-sed -i "s/^SITE_BRANDING.*/SITE_BRANDING\ =\ 'EayunStack'/g" /usr/share/openstack-dashboard/openstack_dashboard/settings.py
 cp -f /usr/share/openstack-dashboard/static/dashboard/img/eayun/logo.png /usr/share/openstack-dashboard/static/dashboard/img/
 cp -f /usr/share/openstack-dashboard/static/dashboard/img/eayun/logo-splash.png /usr/share/openstack-dashboard/static/dashboard/img/
 cp -f /usr/share/openstack-dashboard/static/dashboard/img/eayun/favicon.ico /usr/share/openstack-dashboard/static/dashboard/img/
 cp -f /usr/share/openstack-dashboard/static/dashboard/img/eayun/logo.png /usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/
 cp -f /usr/share/openstack-dashboard/static/dashboard/img/eayun/logo-splash.png /usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/
 cp -f /usr/share/openstack-dashboard/static/dashboard/img/eayun/favicon.ico /usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/
-/usr/bin/systemctl restart httpd.service
 
 %files
 %doc
 %attr(0644,root,root)/usr/share/openstack-dashboard/static/dashboard/img/eayun/logo.png
 %attr(0644,root,root)/usr/share/openstack-dashboard/static/dashboard/img/eayun/logo-splash.png
 %attr(0644,root,root)/usr/share/openstack-dashboard/static/dashboard/img/eayun/favicon.ico
-
 
 %changelog
 
