@@ -1,6 +1,6 @@
 Name:		eayunstack-dashboard-theme
 Version:	1.0
-Release:	1%{?dist}
+Release:	2%{?dist}.huaxi
 Summary:	EayunStack web user interface reference implementation theme module
 
 License:	GPL
